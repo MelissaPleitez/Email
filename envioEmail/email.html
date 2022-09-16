@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/email.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Enviar Email</title>
+  </head>
+  <body class="bg-gradient-to-r from-indigo-200">
+    <div
+      class="w-100 h-100 max-w-xl my-0 mx-auto p-2 text-center mt-6 drop-shadow-lg sm:min-w-sm"
+    >
+      <header class="border-2 border-black-500 h-50">
+        <h3 class="text-black-50 bg-red-200 font-sans text-2xl font-bold p-3">
+          Enviar Nuevo Email
+        </h3>
+      </header>
+
+      <form id="formulario" class="bg-white py-3">
+        <div class="mb-8">
+          <label for="email">Para:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="form-input md:max-w-lg sm:max-w-sm border-2 border-black-500 rounded w-full p-2"
+          />
+        </div>
+        <div class="mb-8">
+          <label for="asunto">Asunto:</label><br />
+          <input
+            type="text"
+            id="asunto"
+            name="asunto"
+            class="form-input md:max-w-lg sm:max-w-sm border-2 border-black-500 rounded w-full px-5 p-2"
+          />
+        </div>
+        <div class="mb-8">
+          <label for="mensaje">Mensaje:</label><br />
+          <textarea
+            id="mensaje"
+            name="mensaje"
+            class="form-textarea md:max-w-lg border-2 sm:max-w-sm border-black-500 rounded w-full px-5 py-3 mt-4"
+          ></textarea>
+        </div>
+
+        <div id="spinner">
+          <div class="sk-chase">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+          </div>
+        </div>
+
+        <div class="flex justify-between m-2 text-lg font-medium">
+          <button
+            id="enviar"
+            type="submit"
+            class="w-full bg-cyan-100 rounded-md p-3 items-center flex justify-center m-4"
+          >
+            <i class="bx bx-send font-bold text-red-200 mx-1"></i>Enviar
+          </button>
+          <button
+            id="resetn"
+            type="button"
+            class="w-full bg-cyan-100 rounded-md p-3 items-center flex justify-center m-4"
+          >
+            <i class="bx bx-reset font-bold text-red-200 mx-1"></i>Reset Form
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/email.js"></script>
+  </body>
+</html>
